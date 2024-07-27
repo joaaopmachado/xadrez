@@ -1,30 +1,29 @@
-# xadrez-engine
-João Pedro Ribeiro Machado
+# Projeto Xadrez | Programação funcional ![Haskell](https://img.shields.io/badge/Haskell-5e5086?style=for-the-badge&logo=haskell&logoColor=white)
 
-Projeto para a materia de programação estruturada da UFABC.
-Para jogar, vc deve buildar o código com: stack build e depois rodar 
-o código com stack exex xadrez-engine.
+<p align="center">
+<img src="https://i.ibb.co/0DkWq1G/Ufabc-logo.png" width="100" height="100" alt="Logo UFABC">
+</p>
 
-Durante a realização desse programa utilizei o chatpgt para me auxiliar
- na elaboração do programa.
+Participantes:
 
-exemplo:
+- Vitor Bobig Diricio | 11201811376
+- Joao Pedro Machado |
+- Thiago Schwartz Machado |
 
-Vamos iniciar o jogo de Xadrez!
-   a b c d e f g h
-  -----------------
-8 | r n b q k b n r | 8
-7 | p p p p p p p p | 7
-6 |                 | 6
-5 |                 | 5
-4 |                 | 4
-3 |                 | 3
-2 | P P P P P P P P | 2
-1 | R N B Q K B N R | 1
-  -----------------
-   a b c d e f g h
-Vez das Branca. Digite seu movimento ou 'sair' para encerrar:
-e2e4.
+## Planejamento de entregas
+
+- Primeira entrega: Idealmente planejamos entregar um jogo de xadrez com interação feita através do terminal parcialmente funcional. Até o momento da primeira entrega, acreditamos que ainda existirão bugs e correções necessárias.
+
+- Segunda entrega: Jogo de xadrez 100% funcional e opcionalmente com uma GUI, caso haja tempo ábil
+
+## Instalação e usabilidade
+
+Para rodar o código, basta clonar o repositório e rodar
+
+bash
+stack run
 
 
--- o bispo apresentou alguns problemas na execução, assim como a rainha.
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
