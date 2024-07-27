@@ -21,9 +21,10 @@ loopJogo estado@(tab, cor) = do
         then putStrLn "Fim do jogo!"
         else do
             (novoEstado@(novoTab, _), jogoAcabou) <- processarEntrada entrada estado
-            mostrarTabuleiro novoTab
             if jogoAcabou
-                then putStrLn "Jogo terminado."
+                then do
+                    putStrLn "Jogo terminado."
+                    mostrarTabuleiro tab
                 else loopJogo novoEstado
 
 processarEntrada :: String -> (Tabuleiro, Cor) -> IO ((Tabuleiro, Cor), Bool)
@@ -49,4 +50,3 @@ main :: IO ()
 main = do
     putStrLn "Vamos iniciar o jogo de Xadrez!"
     loopJogo estadoInicial
-
