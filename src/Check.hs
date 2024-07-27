@@ -2,9 +2,9 @@ module Check (verificarXeque, verificarXequeAposMovimento) where
 
 import Tabuleiro
 import Data.List (find)
-import Data.Char (isUpper, isLower)  -- Adicione esta linha
+import Data.Char (isUpper, isLower)
 import Utils (pecaNaPosicao', charToPeca, corPeca)
-import ProcessarMovimento (movimentoValido) -- Remova funções desnecessárias
+import ValidacaoMovimento (movimentoValido)
 
 -- Função para verificar se uma posição está sob ataque
 estaSobAtaque :: Tabuleiro -> Posicao -> Cor -> Bool
@@ -23,18 +23,6 @@ verificarXequeAposMovimento :: Tabuleiro -> Cor -> Bool
 verificarXequeAposMovimento tab cor = verificarXeque tab cor
 
 -- Funções auxiliares
-
-pecaNaPosicao :: Posicao -> Tabuleiro -> (Char, Maybe Cor)
-pecaNaPosicao (col, lin) tab = 
-    let linha = tab !! lin
-        peca = linha !! col
-    in (peca, corPecaFromChar peca)
-
-corPecaFromChar :: Char -> Maybe Cor
-corPecaFromChar c
-    | isUpper c = Just Branca
-    | isLower c = Just Preta
-    | otherwise = Nothing
 
 tipoPeca :: Peca -> Peca
 tipoPeca (Rei cor) = Rei cor
