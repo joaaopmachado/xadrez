@@ -48,3 +48,4 @@ moverPeca (x1, y1) (x2, y2) tab =
         tabFinal = take y2 tabIntermediario ++ [linhaFinalAtualizada] ++ drop (y2 + 1) tabIntermediario
     in
         tabFinal
+
